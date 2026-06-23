@@ -17,5 +17,6 @@ with
   )
 select
   *,
-  (combined_training * combined_holidays) as training_and_holiday_overlap
+  (combined_training * combined_holidays) as training_and_holiday_overlap,
+  (combined_training - combined_holidays) as actually_training
 from combined_all_ranges;
